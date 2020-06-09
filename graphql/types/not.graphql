@@ -1,0 +1,21 @@
+type Query {
+    Not(id: ID!): Not!
+    Notes: [Not!]!
+}
+
+type Not {
+    id: ID!
+    Name: String!
+    Link: String!
+    Lesson: Lesson!
+}
+
+type Mutation {
+    createNot(data: CreateNotInput!): Not!
+}
+
+input CreateNotInput {
+    Name: String!
+    Link: String!
+    lessonId: ID!
+}

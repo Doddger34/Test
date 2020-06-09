@@ -1,0 +1,19 @@
+type Query {
+    Lesson(id: ID!): Lesson!
+    Lessons: [Lesson!]!
+}
+
+type Lesson {
+    id: ID!
+    Name: String!
+    CreatedAt: String
+    Not: [Not!]!
+}
+
+type Mutation {
+    createLesson(data:CreateLessonInput!): Lesson!
+}
+
+input CreateLessonInput {
+    Name: String!
+}
