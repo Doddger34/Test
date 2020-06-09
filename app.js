@@ -6,7 +6,6 @@ const expressGraphql = require("express-graphql");
 const { ApolloServer } = require("apollo-server-express");
 const { importSchema } = require("graphql-import");
 const jwt = require("jsonwebtoken");
-const index = require("./routes/index");
 
 //DOTENV
 dotenv.config({
@@ -28,7 +27,8 @@ const server = new ApolloServer({
     Not,
     Lesson,
     activeUser: req.activeUser
-  })
+  }),
+  introspection: true
 });
 
 //database
@@ -58,7 +58,6 @@ app.use(async (req, res, next) => {
 });
 app.options(optionsCors, cors());
 app.use(cors());
-app.use("/", index);
 server.applyMiddleware({ app });
 
 app.listen({ port:3009 }, () => {
