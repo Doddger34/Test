@@ -60,7 +60,8 @@ app.use(async (req, res, next) => {
 app.options(optionsCors, cors());
 app.use(cors());
 server.applyMiddleware({ app });
+var port = process.env.PORT || 3009;
 
-app.listen({ port:3009 }, () => {
+app.listen(port, () => {
   console.log("server started");
 });
