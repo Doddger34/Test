@@ -2,7 +2,6 @@ scalar Date
 type Query {
     user(id: ID!): User!
     users: [User!]!
-
     activeUser: User
 }
 
