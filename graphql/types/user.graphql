@@ -19,8 +19,8 @@ type Mutation {
 }
 
 input  CreateUserInput {
-    UserName: String!,
-    password: String!,
+    UserName: String!
+    password: String!
     email: String!
 }
 input  SigninUserInput {
