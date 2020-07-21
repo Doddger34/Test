@@ -24,6 +24,6 @@ input  CreateUserInput {
     email: String!
 }
 input  SigninUserInput {
-    password: String!,
+    password: String!
     UserName: String!
 }
