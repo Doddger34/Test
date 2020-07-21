@@ -1,4 +1,3 @@
-scalar Date
 type Query {
     user(id: ID!): User!
     users: [User!]!
@@ -12,7 +11,6 @@ type User {
   Not: [Not]
   Block: Boolean
   role: String
-  createdAt: Date
 }
 
 type Mutation {
