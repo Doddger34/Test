@@ -12,6 +12,9 @@ const NotesSchema = new Schema({
   userId: {
     type: String
   },
+  classId: {
+    type: String
+  },
   Link: {
     type: String
   },

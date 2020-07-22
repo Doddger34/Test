@@ -7,8 +7,9 @@ type Not {
     id: ID!
     Name: String!
     Link: String!
-    Lesson: Lesson
-    User: User
+    Lesson: Lesson!
+    User: User!
+    Class: Class!
 }
 
 type Mutation {
@@ -20,4 +21,5 @@ input CreateNotInput {
     Link: String!
     lessonId: ID!
     userId: ID!
+    classId: ID!
 }

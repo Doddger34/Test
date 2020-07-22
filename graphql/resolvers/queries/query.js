@@ -48,12 +48,26 @@ const Query = {
         throw new Error(e);
       }
     },
-    Lessons: async(parent, args, { Lesson }) => {
+    Lessons: async (parent, args, { Lesson }) => {
       try {
         return await Lesson.find({}).sort({'createdAt': 'desc'});
       } catch (e) {
         throw new Error(e);
       }
+    },
+    Class: async(parent, args, { Class }) => {
+      try {
+        return await Class.findById(args.id);
+      } catch (e) {
+        throw new Error(e);
+      }
+    },
+    Classes: async (parent, args, { Class }) => {
+      try {
+        return await Class.find({}).sort({'createdAt': 'desc'});
+      } catch (e) {
+        throw new Error(e);
+      }
     }
- }
+}
 module.exports = Query;

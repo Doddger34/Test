@@ -1,0 +1,20 @@
+scalar Date
+type Query {
+    Class(id: ID!): Class
+    Classes: [Class!]!
+}
+
+type Class {
+    id: ID!
+    ClassName: Int!
+    createdAt: Date
+    Not: [Not]
+}
+
+type Mutation {
+    creteClass(data: CreateClassInput): Class!
+}
+
+input CreateClassInput {
+    ClassName: Int!
+} 

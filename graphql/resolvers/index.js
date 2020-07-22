@@ -2,6 +2,7 @@ const  Query = require('./queries/query');
 const  Not = require('./queries/not');
 const  Lesson = require('./queries/lesson');
 const  User = require('./queries/usernot');
+const  Class = require('./queries/class');
 
 const Mutation = require('./mutation/index');
 
@@ -10,5 +11,6 @@ module.exports = {
     Mutation,
     Not,
     User,
-    Lesson
+    Lesson,
+    Class
 }

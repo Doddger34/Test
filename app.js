@@ -18,6 +18,7 @@ const resolvers = require("./graphql/resolvers/index");
 const User = require("./models/user");
 const Not = require("./models/notes");
 const Lesson = require("./models/lesson");
+const Class = require("./models/class");
 const server = new ApolloServer({
   typeDefs: importSchema("./graphql/sechema.graphql"),
   resolvers,
@@ -25,6 +26,7 @@ const server = new ApolloServer({
     User,
     Not,
     Lesson,
+    Class,
     activeUser: req.activeUser
   }),
   introspection: true

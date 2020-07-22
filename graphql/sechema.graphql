@@ -10,5 +10,6 @@
 
 # import Query from './types/token.graphql'
 
-
+# import Query from './types/class.graphql'
+# import Mutation from './types/class.graphql'
 
