@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const expressGraphql = require("express-graphql");
-const { ApolloServer, PubSub } = require("apollo-server-express");
+const { ApolloServer } = require("apollo-server-express");
 const { importSchema } = require("graphql-import");
 const jwt = require("jsonwebtoken");
 //DOTENV
@@ -20,9 +20,6 @@ const User = require("./models/user");
 const Not = require("./models/notes");
 const Lesson = require("./models/lesson");
 const Class = require("./models/class");
-const Chat = require("./models/chat");
-
-const pubsub = new PubSub();
 
 const server = new ApolloServer({
   typeDefs: importSchema("./graphql/sechema.graphql"),
@@ -32,9 +29,7 @@ const server = new ApolloServer({
     Not,
     Lesson,
     Class,
-    pubsub,
-    Chat,
-    activeUser: req.activeUser 
+    activeUser: req ? req.activeUser : null 
   }),
   introspection: true
 });

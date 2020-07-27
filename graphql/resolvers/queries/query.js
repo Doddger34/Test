@@ -68,17 +68,6 @@ const Query = {
       } catch (e) {
         throw new Error(e);
       }
-    },
-    Chat: async (parent, args, { Chat }) => {
-      return await Chat.findById(args.id);
-    },
-    Chates: async (parent, args, { Chat }) => {
-      try {
-        return await Chat.find({}).sort({ 'CreatedAt':'desc' })
-      } catch (e) {
-        throw Error(e);
-      }
-    }    
-
+    }
 }
 module.exports = Query;
