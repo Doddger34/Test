@@ -1,0 +1,22 @@
+scalar Date
+type Query {
+    Comment(postId:ID!): Comment
+    Comments: [Comment]
+}
+
+type Comment {
+    text: String
+    User: User
+    Post: Post
+    CreatedAt: Date
+}
+
+type Mutation {
+    CreateComment(data:CreateCommentInput): Comment!
+}
+
+input CreateCommentInput {
+    text: String!
+    userId: ID!
+    postId: ID!
+}

@@ -32,7 +32,14 @@ const UserModel= new Schema({
     Block: {
         type: Boolean,  
         default: false
+    },
+    Comment: {
+        type: String
+    },
+    Post:{
+        type: String
     }
+
 });
 
 UserModel.pre('save', function(next){

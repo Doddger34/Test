@@ -20,6 +20,8 @@ const User = require("./models/user");
 const Not = require("./models/notes");
 const Lesson = require("./models/lesson");
 const Class = require("./models/class");
+const Post = require("./models/post");
+const Comment = require("./models/comment");
 
 const server = new ApolloServer({
   typeDefs: importSchema("./graphql/sechema.graphql"),
@@ -29,6 +31,8 @@ const server = new ApolloServer({
     Not,
     Lesson,
     Class,
+    Post,
+    Comment,
     activeUser: req ? req.activeUser : null 
   }),
   introspection: true
@@ -61,7 +65,7 @@ app.use(async (req, res, next) => {
 });
 app.options(optionsCors, cors());
 app.use(cors());
-server.applyMiddleware({ app });
+server.applyMiddleware({ app, playgroundPath: '/graphql/' });
 
 var port = process.env.PORT || 3009;
 const httpServer = http.createServer(app);

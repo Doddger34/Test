@@ -64,10 +64,38 @@ const Query = {
     },
     Classes: async (parent, args, { Class }) => {
       try {
-        return await Class.find({}).sort({'CreatedAt': 'desc'});
+        return await Class.find({}).sort({'CreatedAt':'desc'});
       } catch (e) {
         throw new Error(e);
       }
-    }
+    },
+    Post: async(parent, args, { Post }) => {
+      try {
+        return await Post.findById(args.id);
+      } catch (e) {
+        throw new Error(e);
+      }
+    },
+    Posts: async (parent, args, { Post }) => {
+      try {
+        return await Post.find({}).sort({'CreatedAt': 'desc'});
+      } catch (e) {
+        throw new Error(e);
+      }
+    },
+    Comment: async(parent, args, { Comment }) => {
+      try {
+        return await Comment.findById(args.id);
+      } catch (e) {
+        throw new Error(e);
+      }
+    },
+    Comments: async (parent, args, { Comment }) => {
+      try {
+        return await Comment.find({}).sort({'CreatedAt': 'desc'});
+      } catch (e) {
+        throw new Error(e);
+      }
+    }    
 }
 module.exports = Query;

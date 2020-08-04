@@ -9,10 +9,11 @@ type Class {
     ClassName: Int!
     createdAt: Date
     Not: [Not]
+    Post: [Post]
 }
 
 type Mutation {
-    creteClass(data: CreateClassInput): Class!
+    CreteClass(data: CreateClassInput): Class!
 }
 
 input CreateClassInput {

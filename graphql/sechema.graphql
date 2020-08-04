@@ -13,3 +13,9 @@
 # import Query from './types/class.graphql'
 # import Mutation from './types/class.graphql'
 
+# import Query from './types/post.graphql'
+# import Mutation from './types/post.graphql'
+
+# import Query from './types/comment.graphql'
+# import Mutation from './types/comment.graphql'
+

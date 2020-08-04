@@ -11,6 +11,8 @@ type User {
   Not: [Not]
   Block: Boolean
   role: String
+  Post: [Post]
+  Comment: [Comment]
 }
 
 type Mutation {
