@@ -27,7 +27,7 @@ const NotesSchema = new Schema({
   },
   Clicked: {
     type: Number,
-    default: 0  
+    default: 0
   }
 });
 

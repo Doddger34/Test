@@ -7,6 +7,6 @@ const Not = {
     },
     Class: async (parent, args, { Class }) => {
         return await Class.findById(parent.classId)
-    }   
+    } 
 }
 module.exports = Not;

@@ -1,11 +1,12 @@
 module.exports = {
-    CreatePost: async (parent, { data: { content, img, userId, classId } }, { Post }) => {
+    CreatePost: async (parent, { data: { content, img, userId, classId, like } }, { Post }) => {
         try {
             return new Post({
                 content,
                 img,
                 userId,
-                classId
+                classId,
+                like
             }).save();
         } catch (e) {
             throw new Error(e);
