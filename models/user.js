@@ -47,7 +47,6 @@ const UserModel= new Schema({
       type: Boolean,
       default: false
     },
-
 });
 
 UserModel.pre('save', function(next){
