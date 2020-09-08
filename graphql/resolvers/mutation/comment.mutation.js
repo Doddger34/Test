@@ -4,7 +4,7 @@ module.exports = {
             return new Comment({
                 text,
                 userId,
-                postId   
+                postId
             }).save();
         } catch (e) {
             throw new Error(e);

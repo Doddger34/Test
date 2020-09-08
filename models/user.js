@@ -19,7 +19,7 @@ const UserModel= new Schema({
         require: true,
         unique: true, //Tek mail ile kayd olunacak bunu sağlıyor
         // Burası sadece gmail hotmail olmasını sağlıyor
-        match: [/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/] 
+        match: [/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/]
     },
     createdAt:{
         type: Date,
@@ -30,7 +30,7 @@ const UserModel= new Schema({
         default: 'Kullanıcı'
     },
     Block: {
-        type: Boolean,  
+        type: Boolean,
         default: false
     },
     Comment: {
@@ -38,7 +38,15 @@ const UserModel= new Schema({
     },
     Post:{
         type: String
-    }
+    },
+    Avatarurl:{
+      type: String,
+      default: null
+    },
+    CanDelete:{
+      type: Boolean,
+      default: false
+    },
 
 });
 

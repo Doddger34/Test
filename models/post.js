@@ -21,9 +21,12 @@ const PostSchema = new Schema({
     },
     classId: {
         type: String
+    },
+    UserProfileId: {
+      type: String
     }
 });
 
-const Post = mongoose.model('Post', PostSchema);
+const Post = mongoose.model('Posts', PostSchema);
 
 module.exports = Post;

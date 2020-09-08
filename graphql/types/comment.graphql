@@ -13,8 +13,8 @@ type Comment {
 
 type Mutation {
     CreateComment(data:CreateCommentInput): Comment!
-}
 
+}
 input CreateCommentInput {
     text: String!
     userId: ID!

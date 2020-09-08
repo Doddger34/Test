@@ -3,7 +3,6 @@ const uri = process.env.MONGO_URI
 
 const connectDatabase = () => {
     mongoose.connect(uri, {
-
         useNewUrlParser: true,
         useFindAndModify : false,
         useCreateIndex: true,
