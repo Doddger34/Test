@@ -1,8 +1,8 @@
 scalar Date
 type Query {
-    user(id: ID!): User!
-    users: [User!]!
-    activeUser: User
+  user(id: ID!): User!
+  users: [User!]!
+  activeUser: User
 }
 
 type User {
@@ -20,17 +20,17 @@ type User {
 }
 
 type Mutation {
-    createUser(data: CreateUserInput!): Token
-    signIn(data:SigninUserInput): Token
+  createUser(data: CreateUserInput!): Token
+  signIn(data: SigninUserInput): Token
 }
 
-input  CreateUserInput {
-    UserName: String!
-    password: String!
-    email: String!
+input CreateUserInput {
+  UserName: String!
+  password: String!
+  email: String!
 }
 
-input  SigninUserInput {
-    password: String!
-    UserName: String!
+input SigninUserInput {
+  password: String!
+  UserName: String!
 }

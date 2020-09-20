@@ -7,6 +7,7 @@ type Query {
 type Post {
   id: ID!
   content: String!
+  text: String!
   CreatedAt: Date!
   User: User!
 }
@@ -16,6 +17,7 @@ type Mutation {
 }
 
 input CreatePostInput {
-  content: String
+  content: String!
   userId: ID!
+  text: String!
 }

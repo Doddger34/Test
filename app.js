@@ -40,6 +40,7 @@ const server = new ApolloServer({
 
 //database
 const database = require("./helpers/database/connectDatabase");
+
 //MongoDb connect
 database();
 
